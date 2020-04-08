@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   title: {
@@ -13,8 +13,14 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     marginTop: 15,
     marginBottom: 20,
+    paddingLeft: 24,
   },
-  row: {flexDirection: 'row'},
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: Dimensions.get('window').width,
+    paddingRight: 24,
+  },
 });
 
 export default styles;

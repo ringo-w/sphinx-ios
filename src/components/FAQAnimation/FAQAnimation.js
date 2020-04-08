@@ -31,6 +31,7 @@ class FAQAnimation extends Component {
     Animated.timing(this.state.rotate, {
       toValue: 1,
       duration: 250,
+      useNativeDriver: true,
     }).start();
   };
 
@@ -42,11 +43,14 @@ class FAQAnimation extends Component {
 
   render() {
     const {data} = this.props;
-    const Spin = this.state.rotate.interpolate({
+    const SpinForward = this.state.rotate.interpolate({
+      inputRange: ['0', '1'],
+      outputRange: ['0deg', '180deg'],
+    });
+    const SpinBackward = this.state.rotate.interpolate({
       inputRange: ['0', '1'],
       outputRange: ['0deg', '-180deg'],
     });
-
     return (
       <View>
         <TouchableOpacity
@@ -56,25 +60,21 @@ class FAQAnimation extends Component {
           }}>
           {this.state.toggle ? (
             <View>
-              <View>
-                <View>
-                  <Animated.View style={{transform: [{rotate: Spin}]}}>
-                    <Text>x</Text>
-                  </Animated.View>
-                </View>
+              <View style={styles.row}>
                 <AppText style={styles.title}>{data.title}</AppText>
+                <Animated.View style={{transform: [{rotate: SpinForward}]}}>
+                  <Text>x</Text>
+                </Animated.View>
               </View>
 
               <AppText style={styles.description}>{data.description}</AppText>
             </View>
           ) : (
             <View style={styles.row}>
-              <View>
-                <Animated.View style={{transform: [{rotate: Spin}]}}>
-                  <Text>+</Text>
-                </Animated.View>
-              </View>
               <AppText style={styles.title}>{data.title}</AppText>
+              <Animated.View style={{transform: [{rotate: SpinBackward}]}}>
+                <Text>+</Text>
+              </Animated.View>
             </View>
           )}
         </TouchableOpacity>
