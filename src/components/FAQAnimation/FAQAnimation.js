@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
   View,
-  Text,
+  Image,
   TouchableOpacity,
   LayoutAnimation,
   UIManager,
@@ -60,20 +60,19 @@ class FAQAnimation extends Component {
           }}>
           {this.state.toggle ? (
             <View>
-              <View style={styles.row}>
+              <View style={styles.container}>
                 <AppText style={styles.title}>{data.title}</AppText>
                 <Animated.View style={{transform: [{rotate: SpinForward}]}}>
-                  <Text>x</Text>
+                  <Image source={require('../../assets/icons/close.png')} />
                 </Animated.View>
               </View>
-
               <AppText style={styles.description}>{data.description}</AppText>
             </View>
           ) : (
-            <View style={styles.row}>
+            <View style={[styles.container, styles.bottomBorder]}>
               <AppText style={styles.title}>{data.title}</AppText>
               <Animated.View style={{transform: [{rotate: SpinBackward}]}}>
-                <Text>+</Text>
+                <Image source={require('../../assets/icons/plus.png')} />
               </Animated.View>
             </View>
           )}
