@@ -1,9 +1,10 @@
 import React from 'react';
 // import Login from './screens/Login';
-import Support from './screens/Support';
+// import Support from './screens/Support';
+import Profile from './screens/Profile';
 
 const App = () => {
-  return <Support />;
+  return <Profile />;
 };
 
 export default App;
