@@ -29,5 +29,21 @@ const styles = StyleSheet.create({
     color: '#FFF',
     textAlign: 'center',
   },
+  form: {
+    flex: 1,
+    width: '87.2%',
+    alignSelf: 'center',
+    paddingTop: 50,
+  },
+  text: {
+    fontFamily: 'GTWalsheimPro-Regular',
+    fontSize: 16,
+    color: '#202442',
+    borderBottomWidth: 1,
+    borderColor: '#E4E8EE',
+    lineHeight: 21,
+    paddingBottom: 9,
+    paddingTop: 25,
+  },
 });
 export default styles;
