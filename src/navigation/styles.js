@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  backArrow: {marginLeft: 25},
+  closeButton: {marginRight: 25.97},
 });
 export default styles;

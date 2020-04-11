@@ -4,7 +4,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  inputField: {alignSelf: 'center', marginTop: 122},
+  problemContainer: {backgroundColor: '#FFF'},
+  FAQContainer: {backgroundColor: '#FAFAFA'},
+  inputField: {alignSelf: 'center', marginTop: 47},
   textInput: {
     width: 327,
     height: 33,

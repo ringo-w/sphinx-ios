@@ -14,21 +14,23 @@ import mockData from './mockData'; // temporary. pull from database or hardcoded
 const Support = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.inputField}>
-        <TextInput
-          placeholder={'Describe your problem here...'}
-          style={styles.textInput}
-        />
+      <View style={styles.problemContainer}>
+        <View style={styles.inputField}>
+          <TextInput
+            placeholder={'Describe your problem here...'}
+            style={styles.textInput}
+          />
+        </View>
+        <View style={styles.buttons}>
+          <TouchableOpacity style={styles.message}>
+            <AppText style={styles.btnTxt}>Send Message</AppText>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.logs}>
+            <AppText style={styles.btnTxt}>Logs</AppText>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.buttons}>
-        <TouchableOpacity style={styles.message}>
-          <AppText style={styles.btnTxt}>Send Message</AppText>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.logs}>
-          <AppText style={styles.btnTxt}>Logs</AppText>
-        </TouchableOpacity>
-      </View>
-      <ScrollView>
+      <ScrollView style={styles.FAQContainer}>
         <AppText style={styles.intro}>
           In this section you will find answers to the most popular questions
           that we receive from our customers.

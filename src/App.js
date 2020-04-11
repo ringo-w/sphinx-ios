@@ -1,10 +1,13 @@
 import React from 'react';
-// import Login from './screens/Login';
-// import Support from './screens/Support';
-import Profile from './screens/Profile';
+import {NavigationContainer} from '@react-navigation/native';
+import RootNav from './navigation';
 
 const App = () => {
-  return <Profile />;
+  return (
+    <NavigationContainer>
+      <RootNav />
+    </NavigationContainer>
+  );
 };
 
 export default App;

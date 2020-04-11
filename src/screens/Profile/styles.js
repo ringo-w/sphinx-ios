@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {flex: 1, backgroundColor: '#FFF'},
   avatar: {alignItems: 'center'},
   image: {
     borderRadius: 75,
@@ -44,6 +44,22 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     paddingBottom: 9,
     paddingTop: 25,
+  },
+  wallet: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottomWidth: 1,
+    borderColor: '#E4E8EE',
+    lineHeight: 21,
+    paddingBottom: 9,
+    paddingTop: 25,
+  },
+  address: {
+    fontFamily: 'GTWalsheimPro-Regular',
+    fontSize: 16,
+    color: '#202442',
   },
 });
 export default styles;

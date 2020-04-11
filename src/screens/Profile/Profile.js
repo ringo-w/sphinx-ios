@@ -1,5 +1,11 @@
 import React from 'react';
-import {ScrollView, View, Image, TextInput} from 'react-native';
+import {
+  ScrollView,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import AppText from '../../components/AppText';
 import styles from './styles';
 
@@ -21,7 +27,12 @@ const Profile = () => {
         <TextInput style={styles.text} placeholder="Name" />
         <TextInput style={styles.text} placeholder="Email" />
         <TextInput style={styles.text} placeholder="Phone Number" />
-        <TextInput style={styles.text} placeholder="BTC Wallet Address" />
+        <View style={styles.wallet}>
+          <TextInput style={styles.address} placeholder="BTC Wallet Address" />
+          <TouchableOpacity>
+            <Image source={require('../../assets/icons/scancode.png')} />
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
