@@ -6,17 +6,18 @@ import Onboarding from '../screens/Onboarding';
 import Profile from '../screens/Profile';
 import Login from '../screens/Login';
 import Support from '../screens/Support';
+import Transactions from '../screens/Transactions';
 
-import App from './navigation';
+import BottomTabs from './navigation';
 
 const RootStack = createStackNavigator();
 
 const RootStackScreens = () => (
-  <RootStack.Navigator mode="card" initialRouteName="App">
+  <RootStack.Navigator mode="card" initialRouteName="Main">
     <RootStack.Screen
       name="Main"
       options={{header: () => null}}
-      component={App}
+      component={BottomTabs}
     />
     <RootStack.Screen
       name="Onboarding"
@@ -37,6 +38,11 @@ const RootStackScreens = () => (
       name="Support"
       options={sharedScreenOptions}
       component={Support}
+    />
+    <RootStack.Screen
+      name="Transactions"
+      options={sharedScreenOptions}
+      component={Transactions}
     />
   </RootStack.Navigator>
 );

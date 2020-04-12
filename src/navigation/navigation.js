@@ -1,7 +1,9 @@
 import React from 'react';
+import {Image} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {sharedScreenOptions} from './config';
+import TabIcon from '../components/TabIcon';
 
 import Transactions from '../screens/Transactions';
 import Chats from '../screens/Chats';
@@ -76,6 +78,16 @@ const SettingsStackScreens = (props) => {
 };
 
 const Nav = createBottomTabNavigator();
+//   {
+//   Onboarding: {
+//     screen: Onboarding,
+//     navigationOptions: () => {
+//       return {
+//         tabBarVisible: false,
+//       };
+//     },
+//   },
+// }
 
 const NavScreens = (props) => {
   return (
@@ -87,7 +99,24 @@ const NavScreens = (props) => {
           fontSize: 12,
           fontFamily: 'GTWalsheimPro-Regular',
         },
-      }}>
+      }}
+      screenOptions={({route}) => ({
+        tabBarIcon: ({focused}) => {
+          let iconName;
+          if (route.name === 'Trades') {
+            iconName = focused ? 'trades' : 'trades';
+          } else if (route.name === 'Chats') {
+            iconName = focused ? 'chat' : 'chat';
+          } else if (route.name === 'Scan') {
+            iconName = focused ? 'scan' : 'scan';
+          } else if (route.name === 'Contacts') {
+            iconName = focused ? 'contacts' : 'contacts';
+          } else if (route.name === 'Settings') {
+            iconName = focused ? 'settings' : 'settings';
+          }
+          return <Image source={{uri: 'test'}} />;
+        },
+      })}>
       <Nav.Screen name="Trades" component={TradesStackScreens} />
       <Nav.Screen name="Chats" component={ChatsStackScreens} />
       <Nav.Screen name="Scan" component={ScanStackScreens} />

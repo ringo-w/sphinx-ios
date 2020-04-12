@@ -10,6 +10,10 @@ const Login = ({navigation}) => {
         onPress={() => navigation.navigate('Support')}
         title="Go to Support screen"
       />
+      <Button
+        onPress={() => navigation.navigate('Transactions')}
+        title="Go to Transactions"
+      />
     </View>
   );
 };
