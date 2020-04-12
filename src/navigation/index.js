@@ -7,10 +7,17 @@ import Profile from '../screens/Profile';
 import Login from '../screens/Login';
 import Support from '../screens/Support';
 
+import App from './navigation';
+
 const RootStack = createStackNavigator();
 
 const RootStackScreens = () => (
-  <RootStack.Navigator mode="card" initialRouteName="Support">
+  <RootStack.Navigator mode="card" initialRouteName="App">
+    <RootStack.Screen
+      name="Main"
+      options={{header: () => null}}
+      component={App}
+    />
     <RootStack.Screen
       name="Onboarding"
       options={{header: () => null}}
