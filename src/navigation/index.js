@@ -13,7 +13,7 @@ import BottomTabs from './navigation';
 const RootStack = createStackNavigator();
 
 const RootStackScreens = () => (
-  <RootStack.Navigator mode="card" initialRouteName="Main">
+  <RootStack.Navigator mode="card" initialRouteName="Onboarding">
     <RootStack.Screen
       name="Main"
       options={{header: () => null}}

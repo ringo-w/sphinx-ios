@@ -28,7 +28,7 @@ const Profile = () => {
         <TextInput style={styles.text} placeholder="Email" />
         <TextInput style={styles.text} placeholder="Phone Number" />
         <View style={styles.wallet}>
-          <TextInput style={styles.address} placeholder="BTC Wallet Address" />
+          <TextInput style={styles.address} placeholder="Node Address" />
           <TouchableOpacity>
             <Image source={require('../../assets/icons/scancode.png')} />
           </TouchableOpacity>
